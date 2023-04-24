@@ -1,39 +1,21 @@
 ﻿int[] arr = { 7, 7, 7, 7, 8, 8, 8, 5, 5, 5, 5, 6, 6, 6,6};
 int most = 0;
-
-for (int i = 0; i < arr.Length; i++)
+int count = 0;
+for (int i = 0; i < 10; i++)
 {
-    if (arr[i] > most)
+    int most1 = arr[0];
+    int count1 = 0;
+    for (int j = 0; j < 10; j++)
     {
-        most = arr[i];
+        if (arr[j] == most1)
+        {
+            count1++;
+        }
+        if (count1 > count)
+        {
+            most = most1;
+            count = count1;
+        }
     }
 }
-int[] j = new int[most + 1];
-for (int i = 0; i <= most; i++)
-{
-    j[i] = 0;
-}
-for (int i = 0; i < arr.Length; i++)
-{
-    j[arr[i]]++;
-}
-int k = 0;
-for (int i = 0; i <= most; i++)
-{
-    if (j[i] > k)
-    {
-        k = j[i];
-    }
-}
-Console.WriteLine("Elements that occur most frequently");
-for (int i = 0; i <= most; i++)
-{
-    if (j[i] == k)
-    {
-        Console.WriteLine(i);
-
-
-
-
-    }
-}
+Console.WriteLine(most);
