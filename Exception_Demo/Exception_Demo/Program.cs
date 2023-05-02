@@ -22,7 +22,7 @@
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("GIve the first number is large than the second number");
+                    Console.WriteLine("first number is smaller than the second number");
                 }
             }
             catch(DivideByZeroException) {
