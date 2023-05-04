@@ -31,7 +31,7 @@ namespace Customer_details
             string city = Console.ReadLine();
             string id = Convert.ToString(firstname[0] + lastname[0] + phoneno[3]);
             Console.WriteLine(id);
-           customers.Add(new Customer { Firstname = firstname, Lastname = lastname, Mail = mail, Age = age, Phoneno = phoneno, city = city, Id = id });
+           customers.Add(new Customer(){ Firstname = firstname, Lastname = lastname, Mail = mail, Age = age, Phoneno = phoneno, city = city, Id = id });
         }
         public void GetDetails() 
         {
