@@ -26,12 +26,12 @@
 
     class Cal2 : Cal1
     {
-       public Cal2 () 
+       public Cal2 () : base(9, 1)
         {
             base.show(10,20,30);    
             Console.WriteLine("Second one");
         }
-        public Cal2(String x) :base(9,1)
+        public Cal2(String x) 
         {
             Console.WriteLine(x);
         }
